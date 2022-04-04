@@ -36,6 +36,7 @@ export default function Home() {
 						onClick={() => parallax.current.scrollTo(1)}>
 						<Image
 							priority={true}
+							loading="eager"
 							src="/somathecat.svg"
 							width={1000}
 							height={1000}
@@ -51,6 +52,7 @@ export default function Home() {
 						<div className="flex justify-center">
 							<Image
 								priority={true}
+								loading="eager"
 								src="/soma4.png"
 								layout="intrinsic"
 								width={1000}
@@ -64,6 +66,7 @@ export default function Home() {
 							<div className="relative -right-8 -top-24 md:-top-0 md:-right-24">
 								<Image
 									priority={true}
+									loading="eager"
 									src="/mewmewmew.svg"
 									layout="intrinsic"
 									width={400}
@@ -81,6 +84,7 @@ export default function Home() {
 						<div className="flex justify-center">
 							<Image
 								priority={true}
+								loading="eager"
 								src="/soma1.png"
 								width={800}
 								height={800}
@@ -92,6 +96,7 @@ export default function Home() {
 							<div className="relative -top-44 md:-top-0 md:-right-96">
 								<Image
 									priority={true}
+									loading="eager"
 									src="/mewBottomRight.svg"
 									width={400}
 									height={400}
@@ -108,6 +113,7 @@ export default function Home() {
 							<div className="relative top-32 md:top-20">
 								<Image
 									priority={true}
+									loading="eager"
 									src="/soma3.png"
 									width={1000}
 									height={800}
@@ -119,6 +125,7 @@ export default function Home() {
 						<div className="flex justify-center">
 							<Image
 								priority={true}
+								loading="eager"
 								src="/inkpaintBorder.png"
 								layout="fill"
 								alt=""></Image>
