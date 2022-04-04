@@ -121,16 +121,6 @@ export default function Home() {
 							</div>
 						</div>
 					</ParallaxLayer>
-					<ParallaxLayer offset={3} speed={1.1}>
-						<div className="flex justify-center">
-							<Image
-								priority={true}
-								loading="eager"
-								src="/inkpaintBorder.png"
-								layout="fill"
-								alt=""></Image>
-						</div>
-					</ParallaxLayer>
 				</Parallax>
 			</div>
 		</>
