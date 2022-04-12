@@ -3,14 +3,6 @@ import { Parallax, ParallaxLayer } from "@react-spring/parallax";
 import Image from "next/image";
 import Head from "next/head";
 
-export const getStaticProps = async (ctx) => {
-	return {
-		props: {
-			data: null,
-		},
-	};
-};
-
 export default function Home() {
 	const parallax = useRef(null);
 	return (
