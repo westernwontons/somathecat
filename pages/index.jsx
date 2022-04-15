@@ -10,6 +10,10 @@ export default function Home() {
 			<Head>
 				<title>SomaTheCat</title>
 				<meta name="viewport" content="initial-scale=1.0, width=device-width" />
+				<meta
+					name="description"
+					content="This website is about an unusually handsome cat with some flashy animations because why not."
+				/>
 			</Head>
 			<div className="bg-cover">
 				<Parallax
