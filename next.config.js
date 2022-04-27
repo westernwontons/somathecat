@@ -38,7 +38,7 @@ const nextConfig = {
 					},
 					{
 						key: "Referrer-Policy",
-						value: "origin",
+						value: "strict-origin",
 					},
 					{
 						key: "Permissions-Policy",
