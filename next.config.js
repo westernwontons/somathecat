@@ -4,6 +4,8 @@ const ContentSecurityPolicy = `
   child-src 'self';
   font-src 'self';
 	img-src 'self' data: blob:;
+	object-src 'none';
+	require-trusted-types-for 'script';
 `;
 
 /** @type {import('next').NextConfig} */
