@@ -1,9 +1,9 @@
 const ContentSecurityPolicy = `
-  default-src 'self';
   script-src 'self';
-  child-src example.com;
-  style-src 'self' example.com;
-  font-src 'self';  
+	style-src 'self' 'unsafe-inline' data:;
+  child-src 'self';
+  font-src 'self';
+	img-src 'self' data: blob:;
 `;
 
 /** @type {import('next').NextConfig} */
@@ -11,6 +11,7 @@ const nextConfig = {
 	reactStrictMode: true,
 	poweredByHeader: false,
 	generateEtags: false,
+	compress: false,
 	async headers() {
 		return [
 			{
@@ -24,10 +25,10 @@ const nextConfig = {
 						key: "Strict-Transport-Security",
 						value: "max-age=31536000; includeSubDomains; preload",
 					},
-					// {
-					// 	key: "Content-Security-Policy",
-					// 	value: ContentSecurityPolicy.replace(/\s{2,}/g, "").trim(),
-					// },
+					{
+						key: "Content-Security-Policy-Report-Only",
+						value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
+					},
 					{
 						key: "X-Content-Type-Options",
 						value: "nosniff",
@@ -42,7 +43,11 @@ const nextConfig = {
 					},
 					{
 						key: "Permissions-Policy",
-						value: "none",
+						value: "camera=(), microphone=(), geolocation=()",
+					},
+					{
+						key: "X-XSS-Protection",
+						value: "1; mode=block",
 					},
 				],
 			},
