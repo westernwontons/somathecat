@@ -26,7 +26,7 @@ const nextConfig = {
 						value: "max-age=31536000; includeSubDomains; preload",
 					},
 					{
-						key: "Content-Security-Policy-Report-Only",
+						key: "Content-Security-Policy",
 						value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
 					},
 					{
