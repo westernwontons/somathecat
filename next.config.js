@@ -1,4 +1,18 @@
-const ContentSecurityPolicy = `
+const ContentSecurityPolicyDev = `
+  default-src 'none';
+  script-src 'self' 'unsafe-inline' 'unsafe-eval';
+	connect-src 'self' ws:;
+  form-action 'self';
+  base-uri 'none';
+  style-src 'self' 'unsafe-inline' data:;
+  child-src 'self';
+  font-src 'self';
+  img-src 'self' data: blob:;
+  object-src 'none';
+  require-trusted-types-for 'script';
+`;
+
+const ContentSecurityPolicyProd = `
   default-src 'none';
   script-src 'self';
   form-action 'self';
@@ -25,7 +39,10 @@ const headers = [
 			},
 			{
 				key: "Content-Security-Policy",
-				value: ContentSecurityPolicy.replace(/\s{2,}/g, " ").trim(),
+				value:
+					process.env.NODE_ENV === "development"
+						? ContentSecurityPolicyDev.replace(/\s{2,}/g, " ").trim()
+						: ContentSecurityPolicyProd.replace(/\s{2,}/g, " ").trim(),
 			},
 			{
 				key: "X-Content-Type-Options",
