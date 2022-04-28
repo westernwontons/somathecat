@@ -9,7 +9,6 @@ const ContentSecurityPolicyDev = `
   font-src 'self';
   img-src 'self' data: blob:;
   object-src 'none';
-  require-trusted-types-for 'script';
 `;
 
 const ContentSecurityPolicyProd = `

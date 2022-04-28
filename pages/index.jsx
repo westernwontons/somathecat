@@ -30,15 +30,16 @@ export default function Home() {
 						factor={0.8}
 						className="flex justify-center"
 						onClick={() => parallax.current.scrollTo(1)}>
-						<Image
-							priority={true}
-							loading="eager"
-							src="/somathecat.svg"
-							width={1000}
-							height={1000}
-							alt="SomaTheCat Heading"
-							className="select-none"
-						/>
+						<div className="block pt-72">
+							<Image
+								priority={true}
+								src="/somathecat.svg"
+								width={800}
+								height={200}
+								alt="SomaTheCat Heading"
+								className="select-none"
+							/>
+						</div>
 					</ParallaxLayer>
 					<ParallaxLayer
 						offset={1}
@@ -46,28 +47,17 @@ export default function Home() {
 						className="bg-slate-900"
 						onClick={() => parallax.current.scrollTo(2)}>
 						<div className="flex justify-center">
-							<Image
-								priority={true}
-								loading="eager"
-								src="/soma4.png"
-								layout="intrinsic"
-								width={1000}
-								height={1000}
-								alt=""
-							/>
+							<Image src="/soma4.png" width={1000} height={1000} alt="some 4" />
 						</div>
 					</ParallaxLayer>
 					<ParallaxLayer offset={1.6} speed={1.2}>
 						<div className="flex justify-center">
-							<div className="relative -right-8 -top-24 md:-top-0 md:-right-24">
+							<div className="relative -right-10 -top-44 md:-top-0 md:-right-28">
 								<Image
-									priority={true}
-									loading="eager"
 									src="/mewmewmew.svg"
-									layout="intrinsic"
-									width={400}
-									height={400}
-									alt=""
+									width={600}
+									height={300}
+									alt="mew mew mew mew"
 								/>
 							</div>
 						</div>
@@ -79,8 +69,6 @@ export default function Home() {
 						onClick={() => parallax.current.scrollTo(3)}>
 						<div className="flex justify-center">
 							<Image
-								priority={true}
-								loading="eager"
 								src="/soma1.png"
 								width={800}
 								height={800}
@@ -91,8 +79,6 @@ export default function Home() {
 						<div className="flex justify-center">
 							<div className="relative -top-44 md:-top-0 md:-right-96">
 								<Image
-									priority={true}
-									loading="eager"
 									src="/mewBottomRight.svg"
 									width={400}
 									height={400}
@@ -108,8 +94,6 @@ export default function Home() {
 						<div className="flex justify-center">
 							<div className="relative top-32 md:top-20">
 								<Image
-									priority={true}
-									loading="eager"
 									src="/soma3.png"
 									width={1000}
 									height={800}
