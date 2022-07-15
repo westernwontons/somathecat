@@ -14,6 +14,7 @@ const ContentSecurityPolicyDev = `
 const ContentSecurityPolicyProd = `
   default-src 'none';
   script-src 'self';
+	connect-src 'self'
   form-action 'self';
   base-uri 'none';
   style-src 'self' 'unsafe-inline' data:;
